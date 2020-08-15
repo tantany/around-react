@@ -5,7 +5,6 @@ function Header() {
   return (
     <header className="header">
       <img src={logo} alt="logo" className="logo" />
-      <div className="header__line"></div>
     </header>
   );
 }

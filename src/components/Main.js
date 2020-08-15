@@ -55,7 +55,7 @@ class Main extends React.Component {
         <section className="elements">
           <ul className="elements__container">
             {this.state.cards.map(card => (
-              < Card onCardClick={this.props.onCardClick} id={card._id} link={card.link} name={card.name} likes={card.likes.length} />
+              < Card key={card._id} onCardClick={this.props.onCardClick} card={card} />
             ))}
           </ul>
         </section>
