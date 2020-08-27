@@ -45,9 +45,7 @@ class Api {
   sendUserAvatar(avatar) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
-      body: JSON.stringify({
-        avatar: avatar.link
-      }),
+      body: JSON.stringify(avatar),
       headers: this._headers
     })
     .then((res) => {
@@ -66,8 +64,8 @@ class Api {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
       body: JSON.stringify({
-        name: data.userName,
-        about: data.userJob
+        name: data.name,
+        about: data.about
       }),
       headers: this._headers
     })
